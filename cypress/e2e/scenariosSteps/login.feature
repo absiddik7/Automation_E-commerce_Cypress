@@ -6,4 +6,5 @@ Background: Before each
 Scenario: Login with valid credentials
 	When I enter valid username and password
 	And clicks on the login button
-	Then I see successful login message
+	Then I see products page
+ 

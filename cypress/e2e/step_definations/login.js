@@ -5,19 +5,19 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 })
 
 Given('I visit the login page', () => {
-    cy.visit('https://practicetestautomation.com/practice-test-login/')
+    cy.visit('https://www.saucedemo.com/')
 });
 
 When('I enter valid username and password', () => {
-    cy.get('input[name="username"').type("student")
-    cy.get('input[name="password"').type("Password123")
+    cy.get('input[id="user-name').type("standard_user")
+    cy.get('input[id="password"]').type("secret_sauce")
 });
 
 And('clicks on the login button', () => {
-    cy.get('button[id="submit"').click()
+    cy.get('input[id="login-button"').click()
 });
 
-Then('I see successful login message', () => {
-    cy.get('h1').should('have.text', 'Logged In Successfully')
+Then('I see products page', () => {
+    cy.get('span[class="title"]').should('have.text', 'Products')
 });
 
